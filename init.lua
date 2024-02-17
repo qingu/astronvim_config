@@ -52,6 +52,20 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      fortls = function()
+        return {
+          cmd = {
+            'fortls',
+            '--lowercase_intrinsics',
+            '--hover_signature',
+            '--hover_language=fortran',
+            '--use_signature_help'
+          };
+          filetype = {"fortran"};
+        }
+        end,
+    }
   },
 
   -- Configure require("lazy").setup() options
